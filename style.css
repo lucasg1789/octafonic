@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+
+.buynow {
+    padding: 100px !important;
+}
+
+.heroRight {
+    padding: 250px 10px 250px 10px;
+}
+
+.logoHome {
+    font-size: 48px;
+    padding: 15px;
+}
+
+.heroLeft {
+    grid-area: heroLeft;
+}
+
+.heroRight {
+    grid-area: heroRight;
+}
+
+.heroRight img {
+    padding: 45px 0;
+}
+
+.buyNowRight p {
+    padding: 0px 0px 15px 0px;
+}
+
+@media only screen and (max-width: 768px){
+    .heroRight img {
+        width: 70vw;
+    }
+}
+
+.buyNowSection, .merch {
+    margin: 75px 0;
+}
+
+.navHeader {
+    padding: 30px 0 10px 0;
+}
+
+@media only screen and (max-width: 768px){
+    .menu li {
+        display: inline;
+    }
+    .menu li a {
+        font-size: 18px;
+    }
+    .navHeader {
+        padding: 10px 0;
+    }
+}
+
+.header {
+    padding: 20px 0 10px 0;
+}
+
+.fechasShows {
+    padding: 35px;
+}
+
+form {
+    padding: 35px;
+}
+
+label {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+form div {
+    padding: 5px;
+}
+
+.botonForm {
+    color: white;
+}
+
+.showsFooter {
+    padding: 100px 0;
+}
+
+.instrumento {
+    font-size: 18px;
+    font-style: italic;
+    padding: 0 0 15px 0;
+}
+
+.miebroNombre, .discoTittle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.miembrosSection img, .discosSection img {
+    padding: 10px;
+}
+
+.miembrosSection, .discosSection {
+    padding: 35px;
+}
+
+.banda p {
+    padding: 5px 15px;
+}
+
+.buyNowSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buyNowRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buyNowSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "buyLeft buyRight";
+}
+
+.buyNowLeft {
+    grid-area: buyLeft;
+}
+
+.buyNowRight {
+    grid-area: buyRight;
+}
+
+.buyNowLeft img {
+    width: 40vw;
+}
+
+.buyLogo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 96px;
+}
+
+.buyNowRight img {
+    width: 30vw;
+}
+
+.buyNowRight p {
+    font-size: 32px;
+    padding: 10px;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 1200px){
+    .buyNowRight p {
+        font-size: 24px;
+    }
+
+    .buyButton {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .buyNowSection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "buyLeft"
+        "buyRight";
+    }
+    .buyNowRight p {
+        font-size: 20px;
+    }
+    .buyNowLeft img {
+        width: 360px;
+    }
+    .buyButton {
+        font-size: 20px;
+    }
+    .buyNowRight img {
+        width: 340px;
+    }
+}
+
+.merch {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.merch img:hover {
+    opacity: 0.75;
+}
+
+.merch img {
+    width: 350px;
+}
+
+.merch p {
+    text-align: left;
+    color: #f67723;
+    font-weight: 600;
+}
+
+.productBackground {
+    background-color: brown;
+}
+
+.merchProducts h3 {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    margin: 5px 0 2px 0;
+    text-transform: uppercase;
+}
+
+
+.merchProducts {
+    padding: 15px;
+}
+
+@media only screen and (max-width: 1200px){
+    .merch {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .merch {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .heroRight {
+        padding: 50px 0;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .button {
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+}
+
+.shows-page {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: end;
+    align-content: center;
+    padding: 0 250px;
+    gap: 20px;
+}
+
+.shows-page__buybtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.shows-page__datecolumn {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.showsLocation {
+    font-weight: 600;
+    font-size: 28px;
+    color: #f67723;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.showsPlace {
+    font-weight: 800;
+    font-size: 56px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.showsDate {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.showsDate::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: -1;
+}
+
+
+@media only screen and (max-width: 1280px){
+    .shows {
+        padding: 0 100px;
+    }
+}
+
+.band-page__members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 170px;
+    gap: 25px;
+}
+
+.band-page__tittle {
+    display: block;
+    padding: 15px 0;
+}
+
+.band-page img:hover {
+    opacity: 0.75;
+}
+
+@media only screen and (max-width: 1280px){
+    .band-page__members {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 80px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .band-page__members {
+        grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
+}
+
+.band-page__disc {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0 170px;
+    gap: 25px;
+}
+
+.band-page__singles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 170px 100px 170px;
+    gap: 25px;
+}
+
+.band-page__card img {
+    width: 100%;
+}
+
+.discosSectionTittle, .miembrosTittle, .discosSectionTittle, .miembrosAntiguosTittle {
+    align-self: center;
+} 
+
+.shows-footer {
+    padding: 100px 0;
+    background:
+        linear-gradient(0deg, rgba(17, 17, 17, 1) 0%,rgba(17, 17, 17,0.5) 7%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%,rgba(17, 17, 17,0.5) 92%, rgba(17, 17, 17, 1) 100%),url(img/octafonic-banda5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shows-footer__image {
+    width: 400px;
+    margin: 50px;
+} 
+
+@media only screen and (max-width: 768px){
+    .shows-footer__image {
+        width: 70vw;
+    }
+}
+
+.merchProducts img:hover {
+    opacity: 0.75;
+}
+
+.merchProducts img {
+    width: 100%;
+    height: auto;
+}
+
+.merchProducts p {
+    text-align: left;
+    color: #f67723;
+    font-weight: 600;
+}
+
+.iframeSize iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.socialLinks img {
+    width: 42px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px){
+    .socialLinks img{
+    width: 32px;
+    }
+}
+
+/* ESTILOS HERO */
+
+.hero-main {
+    background:
+        linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0.3) 15%, rgba(17,17,17,0.3) 85%, rgba(17,17,17,1) 100%),url(img/octafonic-banda5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-main__div {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-main__image {
+    display: block;
+    width: 35vw;
+    margin: 25px;
+}
+
+@media only screen and (max-width: 1200px){
+    .hero-main__image {
+        width: 65vw;
+    }
+}
+
+.merch-home__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+}
+
+.merch-home_images {
+    width: 500px;
+    height: auto;
+}
+
+.merch-home_images:hover {
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.merch-home {
+    background:
+        linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, rgba(17,17,17,1) 100%),url(img/octafonic-banda5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* ESTILOS VIDEOS*/
+
+.videos-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.videos-home__iframe {
+    width: 560px;
+    height: 560px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px){
+    .videos-home__iframe {
+        width: 360px;
+        height: 360px;
+    }
+}
+
