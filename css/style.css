@@ -1,49 +1,399 @@
-body {
-  background-color: #111111;
-  color: white;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body i {
-  color: white;
-  font-size: 36px;
+#btn-menu {
+  display: none;
 }
 
-body a {
-  color: white;
-  font-family: 'Roboto', sans-serif;
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 98;
+  width: 100%;
+  background-color: #11111170;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.header label {
+  display: none;
+  width: 42px;
+  height: 42px;
+  margin: 10px;
+}
+
+.header label:hover {
+  cursor: pointer;
+}
+
+.header label img {
+  width: 42px;
+}
+
+.header .menu-header {
+  padding: 25px 0;
+  background-color: #11111179;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.header .menu-header .menu-header__ul {
   text-decoration: none;
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body h1 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 56px;
+.header .menu-header .menu-header__ul .menu-header__li {
+  display: inline-block;
+  text-align: center;
+  position: relative;
 }
 
-body h2 {
+.header .menu-header .menu-header__ul .menu-header__li a {
+  text-decoration: none;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  display: block;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-body h3 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
+.header .menu-header .menu-header__ul .menu-header__li a:hover {
+  color: #f67723;
 }
 
-body h4 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
+@media only screen and (max-width: 768px) {
+  .header {
+    background-color: #11111100;
+  }
+  .header label {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+  }
+  .header .menu-header {
+    position: absolute;
+    background-color: #111111ce;
+    width: 100%;
+    margin-left: 200%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .header .menu-header .menu-header__ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+  }
+  .header .menu-header .menu-header__ul .menu-header__li a {
+    font-size: 3em;
+  }
+  #btn-menu {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #btn-menu:checked ~ .menu-header {
+    margin: 0;
+    z-index: 0;
+  }
 }
 
-body h5 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
+.social-footer {
+  background-color: #111111;
+  padding: 40px 0;
 }
 
-body h6 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
+.social-footer .social-footer__tittle {
+  font-size: 28px;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.social-footer .social-footer__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.social-footer .social-footer__div .social-footer__images {
+  display: inline-block;
+  width: 64px;
+  margin: 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.social-footer .social-footer__div .social-footer__images:hover {
+  margin: 10px 10px 25px 10px;
+}
+
+.merch-home {
+  background-color: #111111;
+  /*background:
+    linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, rgba(17,17,17,1) 100%),url(../img/octafonic-banda1.jpg) repeat fixed 100%;*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.merch-home .merch-home__div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.merch-home .merch-home__div img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .merch-home {
+    height: auto;
+  }
+  .merch-home .merch-home__div {
+    padding: 75px 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.buyalbum {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(17, 17, 17, 0.9)), color-stop(15%, rgba(0, 0, 0, 0.7)), color-stop(85%, rgba(0, 0, 0, 0.7)), to(rgba(17, 17, 17, 0.9))), url(../img/background6.jpg);
+  background: linear-gradient(0deg, rgba(17, 17, 17, 0.9) 0%, rgba(0, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0.7) 85%, rgba(17, 17, 17, 0.9) 100%), url(../img/background6.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 100vh;
+}
+
+.buyalbum .buyalbum__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buyalbum .buyalbum__right p {
+  font-size: 32px;
+  padding: 10px;
+  font-weight: 300;
+}
+
+.buyalbum .buyalbum__left img {
+  width: 100%;
+}
+
+.buyalbum .buyalbum__right img {
+  width: 80%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .buyalbum {
+    height: auto;
+  }
+  .buyalbum .buyalbum__grid {
+    padding: 50px 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+.shows-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.shows-page .shows-page__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 40px;
+  width: 70%;
+}
+
+.shows-page .shows-page__grid .shows-page__datecolumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.shows-page .shows-page__grid .shows-page__datecolumn .shows-page__date {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.shows-page .shows-page__grid .shows-page__datecolumn .shows-page__date::after {
+  content: '';
+  position: absolute;
+  width: 67vw;
+  height: 1px;
+  background-color: white;
+  margin-top: 15px;
+  margin-left: 10px;
+  z-index: -1;
+}
+
+.shows-page .shows-page__grid .shows-page__datecolumn .shows-page__place {
+  font-weight: 500;
+  font-size: 64px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.shows-page .shows-page__grid .shows-page__datecolumn .showsLocation {
+  font-weight: 800;
+  font-size: 36px;
+  color: #f67723;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.shows-page .shows-page__grid .shows-page__buybtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media only screen and (max-width: 1280px) {
+  .shows-page .shows-page__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    gap: 20px;
+  }
+  .shows-page .shows-page__grid .shows-page__datecolumn .shows-page__date::after {
+    width: 60vw;
+  }
+  .shows-page .shows-page__grid .shows-page__buybtn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.merch {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 10px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.merch img {
+  width: 100%;
+}
+
+.merch img:hover {
+  opacity: 0.75;
+}
+
+.merch p {
+  text-align: left;
+  color: #f67723;
+  font-weight: 600;
 }
 
 .form-section {
@@ -56,6 +406,10 @@ body h6 {
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
+}
+
+.form-section div {
+  margin: 10px 0;
 }
 
 .form-section .form-section__contact {
@@ -128,87 +482,54 @@ body h6 {
   font-weight: 600;
 }
 
-.social-footer {
+body {
   background-color: #111111;
-  padding: 40px 0;
-}
-
-.social-footer .social-footer__tittle {
-  font-size: 28px;
-  font-weight: 300;
-  padding: 10px;
-}
-
-.social-footer .social-footer__div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.social-footer .social-footer__div .social-footer__images {
-  display: inline-block;
-  width: 64px;
-  margin: 15px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.social-footer .social-footer__div .social-footer__images:hover {
-  margin: 10px 10px 25px 10px;
-}
-
-.header {
-  height: 10vh;
-}
-
-.header .menu-header {
-  padding: 30px 0 10px 0;
-}
-
-.header .menu-header .menu-header__ul {
-  text-decoration: none;
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 5px;
-}
-
-.header .menu-header .menu-header__ul .menu-header__li {
-  display: inline-block;
-  text-align: center;
-  position: relative;
-}
-
-.header .menu-header .menu-header__ul .menu-header__li a {
-  text-decoration: none;
   color: white;
-  display: block;
-  padding: 0 10px;
-  font-size: 24px;
-  font-weight: 300;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.header .menu-header .menu-header__ul .menu-header__li a:hover {
-  color: #f67723;
-  margin: 5px 5px 10px 5px;
+body a {
+  color: white;
+  font-family: 'Futura Now Text', sans-serif;
+  text-decoration: none;
+}
+
+body h1 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 56px;
+}
+
+body h2 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+body h3 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+body h4 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+body h5 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+body h6 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .button, .button-shows {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 26px;
   background-color: #f67723;
-  padding: 25px 20px;
+  padding: 30px 45px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: inline-block;
@@ -221,4 +542,13 @@ body h6 {
 
 .button-shows:hover {
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .button-shows {
+    width: 100%;
+  }
+  .button-shows:hover {
+    margin-right: 0px;
+  }
 }

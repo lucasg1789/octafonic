@@ -1,12 +1,17 @@
-$primary-global-color: #f67723;
-$secondary-global-color: #111111;
-
+@import "_variables.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "_index-merch.scss";
+@import "_index-buynow.scss";
+@import "_shows_main.scss";
+@import "_merch-main.scss";
+@import "_contacto-main.scss";
 
 @mixin btn {
-        font-weight: 700;
+        font-weight: 900;
         font-size: 26px;
         background-color: #f67723;
-        padding: 25px 20px;
+        padding: 30px 45px;
         transition: all 0.3s ease;
         display: inline-block;
 }
@@ -16,144 +21,42 @@ $secondary-global-color: #111111;
     color: white;
 }
 
-@mixin font {
+@mixin primary-font {
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
+@mixin secondary-font {
+    color: white;
+    font-family: 'Futura Now Text', sans-serif;
+}
+
 body {
-    background-color: #111111;
+    background-color: $secondary-global-color;
     color: white;
     text-align: center;
-    i {
-        color:white;
-        font-size: 36px;
-    }
     a {
-        @include font;
+        @include secondary-font;
         text-decoration: none;
     }
     h1 {
-        @include font;
+        @include primary-font;
         font-size: 56px;
     }
     h2 {
-        @include font;
+        @include primary-font;
     }
     h3 {
-        @include font;
+        @include primary-font;
     }
     h4 {
-        @include font;
+        @include primary-font;
     }
     h5 {
-        @include font;
+        @include primary-font;
     }
     h6 {
-        @include font;
-    }
-}
-
-.form-section {
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    .form-section__contact {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-    .form-section__textarea {
-            textarea {
-                width: 100%;
-                font-size: 18px;
-            }
-    }
-    input {
-        font-size: 18px;
-        width: 100%;
-        input::placeholder {
-            padding: 10px;
-        }
-    }
-    label {
-            font-size: 18px;
-    }
-    .form-section__newsletter {
-        display: flex;
-        input {
-            display: inline-block;
-            width: 5%;
-        }
-    }
-    .form-section__button {
-        display: flex;
-        justify-content: center;
-        input {
-            width: 100%;
-            background-color: $primary-global-color;
-            color: white;
-            padding: 10px 0;
-            font-size: 18px;
-            font-weight: 600;
-        }
-    }
-}
-
-.social-footer {
-    background-color: $secondary-global-color;
-    padding: 40px 0;
-    .social-footer__tittle {   
-        font-size: 28px;
-        font-weight: 300;
-        padding: 10px;
-    }
-    .social-footer__div {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        .social-footer__images {
-            display: inline-block;
-            width: 64px;
-            margin: 15px;
-            transition: all 0.3s ease;
-        }
-        .social-footer__images:hover {
-            margin: 10px 10px 25px 10px;
-        }
-    }
-}
-
-.header {
-    height: 10vh;
-    .menu-header {
-        padding: 30px 0 10px 0;
-        .menu-header__ul {
-            text-decoration: none;
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 5px;
-            .menu-header__li {
-                display: inline-block;
-                text-align: center;
-                position: relative;
-                a {
-                    text-decoration: none;
-                    color: white;
-                    display: block;
-                    padding: 0 10px;
-                    font-size: 24px;
-                    font-weight: 300;
-                    transition: all 0.3s ease;
-                }
-                a:hover {
-                    color: $primary-global-color;
-                    margin: 5px 5px 10px 5px;
-                }
-            }
-        }
+        @include primary-font;
     }
 }
 
@@ -168,5 +71,14 @@ body {
     @extend .button;
     &:hover {
         margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .button-shows {
+        width: 100%;
+        &:hover {
+            margin-right: 0px;
+        }
     }
 }

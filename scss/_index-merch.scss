@@ -1,0 +1,33 @@
+.merch-home {
+    background-color: $secondary-global-color;
+    /*background:
+    linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, rgba(17,17,17,1) 100%),url(../img/octafonic-banda1.jpg) repeat fixed 100%;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .merch-home__div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+        width: $global-width;
+        align-items: center;
+        align-self: center;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .merch-home {
+        height: auto;
+        .merch-home__div {
+            padding: 75px 0;
+            grid-template-columns: 1fr;
+        }
+    }
+}

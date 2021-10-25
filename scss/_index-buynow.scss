@@ -1,0 +1,43 @@
+.buyalbum {
+    background: linear-gradient(0deg, rgba(17,17,17,0.9) 0%, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.7) 85%, rgba(17,17,17,0.9) 100%),url(../img/background6.jpg);
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    height: 100vh;
+    .buyalbum__grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+        width: $global-width;
+        align-items: center;
+    }
+    .buyalbum__right {
+        p {
+            font-size: 32px;
+            padding: 10px;
+            font-weight: 300;
+        }
+    }
+    .buyalbum__left {
+        img {
+        width: 100%;
+        }
+    }
+    .buyalbum__right {
+        img {
+        width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .buyalbum {
+        height: auto;
+        .buyalbum__grid {
+            padding: 50px 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+}
