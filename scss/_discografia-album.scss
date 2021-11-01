@@ -1,0 +1,116 @@
+.hero-discography {
+    background:
+    linear-gradient(0deg, rgba(17, 17, 17, 1) 0%,rgba(17, 17, 17,0.5) 7%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%,rgba(17, 17, 17,1) 92%, rgba(17, 17, 17, 1) 100%),url(../img/octafonic-banda5.jpg) repeat fixed 100%;;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .hero-discography__div {
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .hero-discography__image {
+            display: block;
+            width: 35vw;
+            margin: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .hero-discography {
+        .hero-discography__div {
+            .hero-discography__image {
+                display: block;
+                width: 65vw;
+                margin: 25px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+.discography-page {
+    background: url(../img/background2.jpg) repeat fixed 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .discography-page__h2 {
+        display: flex;
+        padding: 15px 0;
+        width: 75%;
+        justify-content: flex-start;
+        h2 {
+            font-size: 42px;
+            padding: 35px 0;
+        }
+    }
+    .discography-page__disc {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        width: 75%;
+        .discography-page__card {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .discography-page__singles {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 25px;
+        width: 75%;
+        .discography-page__card {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .discography-page {
+        .discography-page__h2 {
+            width: 90%;
+        }
+        .discography-page__disc {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 90%;
+        }
+        .discography-page__singles {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .discography-page {
+        .discography-page__h2 {
+            width: 90%;
+        }
+        .discography-page__disc {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            width: 90%;
+        }
+        .discography-page__singles {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            width: 90%;
+        }
+    }
+}

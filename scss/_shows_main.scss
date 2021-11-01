@@ -1,15 +1,67 @@
+.hero-shows {
+    background:
+    linear-gradient(0deg, rgba(17, 17, 17, 1) 0%,rgba(17, 17, 17,0.5) 7%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%,rgba(17, 17, 17,1) 92%, rgba(17, 17, 17, 1) 100%),url(../img/octafonic-banda5.jpg) repeat fixed 100%;;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .hero-shows__div {
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .hero-shows__image {
+            display: block;
+            width: 35vw;
+            margin: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .hero-shows {
+        .hero-shows__div {
+            .hero-shows__image {
+                display: block;
+                width: 65vw;
+                margin: 25px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
 .shows-page {
+    background: url(../img/background2.jpg) repeat fixed 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .shows-page__h2 {
+        display: flex;
+        padding: 15px 0;
+        width: 75%;
+        justify-content: flex-start;
+        h2 {
+            font-size: 42px;
+            padding: 35px 0 0 0;
+        }
+    }
     .shows-page__grid {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-content: end;
         align-content: center;
-        gap: 40px;
-        width: 70%;
+        width: 75%;
+        border-bottom: solid 1px white;
+        padding: 35px 0;
         .shows-page__datecolumn {
-            display: flex;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -19,25 +71,16 @@
                 font-size: 20px;
                 text-align: left;
                 margin-bottom: 0;
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 67vw;
-                    height: 1px;
-                    background-color: white;
-                    margin-top: 15px;
-                    margin-left: 10px;
-                    z-index: -1;
-                }
             }
             .shows-page__place {
                 font-weight: 500;
                 font-size: 64px;
+                line-height: 64px;
                 text-align: left;
                 padding: 0;
                 margin: 0;
             }
-            .showsLocation {
+            .shows-page__location {
                 font-weight: 800;
                 font-size: 36px;
                 color: #f67723;
@@ -64,6 +107,7 @@
             justify-content: end;
             align-content: center;
             gap: 20px;
+            width: 90%;
             .shows-page__datecolumn {
                 .shows-page__date::after {
                         width: 60vw;

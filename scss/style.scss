@@ -1,11 +1,16 @@
 @import "_variables.scss";
 @import "_header.scss";
 @import "_footer.scss";
-@import "_index-merch.scss";
+@import "_index-hero.scss";
 @import "_index-buynow.scss";
+@import "_index-merch.scss";
+@import "_index-videos.scss";
 @import "_shows_main.scss";
 @import "_merch-main.scss";
+@import "_banda-main.scss";
+@import "_discografia-album.scss";
 @import "_contacto-main.scss";
+@import "_footer-shows.scss";
 
 @mixin btn {
         font-weight: 900;
@@ -21,6 +26,10 @@
     color: white;
 }
 
+@mixin section-padding {
+    padding: 35px 0;
+}
+
 @mixin primary-font {
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -28,7 +37,7 @@
 
 @mixin secondary-font {
     color: white;
-    font-family: 'Futura Now Text', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -38,6 +47,10 @@ body {
     a {
         @include secondary-font;
         text-decoration: none;
+    }
+    P {
+        @include primary-font;
+        font-size: 16px;
     }
     h1 {
         @include primary-font;
