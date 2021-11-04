@@ -43,14 +43,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 35px 0 50px 0;
     .band-page__tittle {
-        display: flex;
         padding: 15px 0;
-        width: 75%;
-        justify-content: flex-start;
+        width: $global-width;
         h2 {
-            font-size: 42px;
+            font-size: $tittle-size;
             padding: 35px 0;
+            text-align: left;
         }
     }
     .band-page__members {
@@ -58,13 +58,20 @@
         grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         gap: 25px;
-        width: 75%;
+        width: $global-width;
         .band-page__card {
             .band-page__images {
                 width: 100%;
                 &:hover {
-                    opacity: 0.75;
+                    @include image-hover;
                 }
+            }
+            h3 {
+                text-align: left;
+            }
+            p {
+                text-align: left;
+                color: $primary-global-color;
             }
         }
     }
@@ -73,13 +80,20 @@
         grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         gap: 25px;
-        width: 75%;
+        width: $global-width;
         .band-page__card {
             img {
                 width: 100%;
                 &:hover {
                     opacity: 0.75;
                 }
+            }
+            h3 {
+                text-align: left;
+            }
+            p {
+                text-align: left;
+                color: $primary-global-color;
             }
         }
     }
@@ -89,11 +103,11 @@
     .band-page {
         .band-page__members {
             grid-template-columns: repeat(2, 1fr);
-            width: 90%;
+            width: $global-width-responsive;
             }
         .band-page__oldmembers {
             grid-template-columns: repeat(2, 1fr);
-            width: 90%;
+            width: $global-width-responsive;
             }
     }
 }

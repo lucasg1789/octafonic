@@ -1,19 +1,28 @@
 .videos-home {
     background: url(../img/background2.jpg) repeat fixed 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 80vh;
+    h2 {
+        font-size: $tittle-size;
+        margin: 20px;
+    }
     .videos-home__container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: space-around;
-        width: 90%;
+        width: $global-width;
+        iframe {
+            width: 100%;
+            height: 650px;
+        }
         .videos-home__iframe {
-            display: inline-block;
+            display: block;
             iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                height: 560px;
+                height: 100%;
             }
         }
     }
@@ -23,13 +32,10 @@
         height: auto;
         .videos-home__container {
             grid-template-columns: 100%;
-            .videos-home__iframe {
+            width: $global-width-responsive;
+            iframe {
                 width: 100%;
-                height: 380px;
-                iframe {
-                    width: 100%;
-                    height: 380px;
-                }
+                height: 420px;
             }
         }
     }

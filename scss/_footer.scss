@@ -18,3 +18,13 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px){
+    .social-footer {
+        .social-footer__div {
+            .social-footer__images {
+                width: 42px;
+            }
+        }
+    }
+}

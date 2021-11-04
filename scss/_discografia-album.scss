@@ -1,23 +1,9 @@
 .hero-discography {
-    background:
-    linear-gradient(0deg, rgba(17, 17, 17, 1) 0%,rgba(17, 17, 17,0.5) 7%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%,rgba(17, 17, 17,1) 92%, rgba(17, 17, 17, 1) 100%),url(../img/octafonic-banda5.jpg) repeat fixed 100%;;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include hero-section;
     .hero-discography__div {
-        padding: 100px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include hero-section__div;
         .hero-discography__image {
-            display: block;
-            width: 35vw;
-            margin: 25px;
+            @include hero-section__image;
         }
     }
 }
@@ -31,7 +17,7 @@
                 margin: 25px;
             }
             h1 {
-                font-size: 32px;
+                font-size: 42px;
             }
         }
     }
@@ -43,25 +29,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 35px 0 50px 0;
     .discography-page__h2 {
-        display: flex;
-        padding: 15px 0;
-        width: 75%;
-        justify-content: flex-start;
-        h2 {
-            font-size: 42px;
-            padding: 35px 0;
-        }
+        @include tittle;
     }
     .discography-page__disc {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 25px;
-        width: 75%;
+        width: $global-width;
         .discography-page__card {
             img {
                 width: 100%;
                 height: auto;
+                &:hover {
+                    @include image-hover;
+                }
+            }
+            h3 {
+                text-align: left;
+            }
+            p {
+                text-align: left;
+                color: $primary-global-color;
             }
         }
     }
@@ -70,10 +60,20 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         gap: 25px;
-        width: 75%;
+        width: $global-width;
         .discography-page__card {
             img {
                 width: 100%;
+                &:hover {
+                    @include image-hover;
+                }
+            }
+            h3 {
+                text-align: left;
+            }
+            p {
+                text-align: left;
+                color: $primary-global-color;
             }
         }
     }
@@ -91,24 +91,6 @@
         }
         .discography-page__singles {
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            width: 90%;
-        }
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .discography-page {
-        .discography-page__h2 {
-            width: 90%;
-        }
-        .discography-page__disc {
-            grid-template-columns: 1fr;
-            gap: 15px;
-            width: 90%;
-        }
-        .discography-page__singles {
-            grid-template-columns: 1fr;
             gap: 15px;
             width: 90%;
         }

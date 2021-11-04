@@ -5,6 +5,35 @@
           box-sizing: border-box;
 }
 
+.button, .button-shows {
+  font-weight: 900;
+  font-size: 20px;
+  background-color: #f67723;
+  padding: 20px 45px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+.button:hover, .button-shows:hover {
+  background-color: #f67723c9;
+  color: white;
+}
+
+.button-shows:hover {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .button-shows {
+    width: 100%;
+  }
+  .button-shows:hover {
+    margin-right: 0px;
+  }
+}
+
 #btn-menu {
   display: none;
 }
@@ -148,6 +177,12 @@
   margin: 10px 10px 25px 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  .social-footer .social-footer__div .social-footer__images {
+    width: 42px;
+  }
+}
+
 .hero-main {
   background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(7%, rgba(17, 17, 17, 0.5)), color-stop(15%, rgba(0, 0, 0, 0)), color-stop(85%, rgba(0, 0, 0, 0)), color-stop(92%, #111111), to(#111111)), url(../img/octafonic-banda5.jpg) repeat fixed 100%;
   background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0.5) 7%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, #111111 92%, #111111 100%), url(../img/octafonic-banda5.jpg) repeat fixed 100%;
@@ -208,31 +243,37 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 100%;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
 }
 
 .buyalbum .buyalbum__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  width: 90%;
+  width: 75%;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.buyalbum .buyalbum__right h2 {
+  font-size: 42px;
+}
+
 .buyalbum .buyalbum__right p {
-  font-size: 32px;
-  padding: 10px;
+  font-size: 20px;
+  margin: 20px;
   font-weight: 300;
 }
 
@@ -249,6 +290,7 @@
     height: auto;
   }
   .buyalbum .buyalbum__grid {
+    width: 90%;
     padding: 50px 0;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -257,82 +299,48 @@
   }
 }
 
-.merch-home {
-  background: url(../img/background.jpg) repeat fixed 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.merch-home .merch-home__div {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
-  width: 90%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.merch-home .merch-home__div img {
-  width: 100%;
-}
-
-@media only screen and (max-width: 1000px) {
-  .merch-home {
-    height: auto;
-  }
-  .merch-home .merch-home__div {
-    padding: 75px 0;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
 .videos-home {
   background: url(../img/background2.jpg) repeat fixed 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  height: 80vh;
+}
+
+.videos-home h2 {
+  font-size: 42px;
+  margin: 20px;
 }
 
 .videos-home .videos-home__container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 90%;
+  width: 75%;
+}
+
+.videos-home .videos-home__container iframe {
+  width: 100%;
+  height: 650px;
 }
 
 .videos-home .videos-home__container .videos-home__iframe {
-  display: inline-block;
+  display: block;
 }
 
 .videos-home .videos-home__container .videos-home__iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 560px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -342,14 +350,11 @@
   .videos-home .videos-home__container {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
+    width: 90%;
   }
-  .videos-home .videos-home__container .videos-home__iframe {
+  .videos-home .videos-home__container iframe {
     width: 100%;
-    height: 380px;
-  }
-  .videos-home .videos-home__container .videos-home__iframe iframe {
-    width: 100%;
-    height: 380px;
+    height: 420px;
   }
 }
 
@@ -373,7 +378,6 @@
 }
 
 .hero-shows .hero-shows__div {
-  padding: 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,22 +425,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 35px 0 50px 0;
 }
 
-.shows-page .shows-page__h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.shows-page .shows-page__tittle {
   padding: 15px 0;
   width: 75%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
-.shows-page .shows-page__h2 h2 {
+.shows-page .shows-page__tittle h2 {
   font-size: 42px;
-  padding: 35px 0 0 0;
+  padding: 35px 0;
+  text-align: left;
 }
 
 .shows-page .shows-page__grid {
@@ -511,7 +511,14 @@
           align-items: flex-end;
 }
 
-@media only screen and (max-width: 1280px) {
+.shows-page .shows-page__grid--firts {
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .shows-page .shows-page__tittle {
+    width: 90%;
+  }
   .shows-page .shows-page__grid {
     display: -ms-grid;
     display: grid;
@@ -606,20 +613,15 @@
   padding: 0 0 35px 0;
 }
 
-.merch-page .merch-page__h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.merch-page .merch-page__tittle {
   padding: 15px 0;
   width: 75%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
-.merch-page .merch-page__h2 h2 {
+.merch-page .merch-page__tittle h2 {
   font-size: 42px;
   padding: 35px 0;
+  text-align: left;
 }
 
 .merch-page .merch-page__grid {
@@ -643,18 +645,22 @@
   opacity: 0.75;
 }
 
-.merch-page .merch-page__grid .merch-page__product p {
+.merch-page .merch-page__grid .merch-page__product h3 {
   text-align: left;
-  color: #f67723;
-  font-weight: 600;
 }
 
-.merch-page .merch-page__grid .merch-page__product .merch-page__h2 {
-  font-size: 18px;
+.merch-page .merch-page__grid .merch-page__product p {
   text-align: left;
+  color: #F47B22;
 }
 
 @media only screen and (max-width: 1280px) {
+  .merch-page .merch-page__tittle {
+    width: 90%;
+  }
+  .merch-page .merch-page__tittle h2 {
+    font-size: 42px;
+  }
   .merch-page .merch-page__grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -738,22 +744,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 35px 0 50px 0;
 }
 
 .band-page .band-page__tittle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 15px 0;
   width: 75%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .band-page .band-page__tittle h2 {
   font-size: 42px;
   padding: 35px 0;
+  text-align: left;
 }
 
 .band-page .band-page__members {
@@ -776,6 +778,15 @@
   opacity: 0.75;
 }
 
+.band-page .band-page__members .band-page__card h3 {
+  text-align: left;
+}
+
+.band-page .band-page__members .band-page__card p {
+  text-align: left;
+  color: #F47B22;
+}
+
 .band-page .band-page__oldmembers {
   display: -ms-grid;
   display: grid;
@@ -796,6 +807,15 @@
   opacity: 0.75;
 }
 
+.band-page .band-page__oldmembers .band-page__card h3 {
+  text-align: left;
+}
+
+.band-page .band-page__oldmembers .band-page__card p {
+  text-align: left;
+  color: #F47B22;
+}
+
 @media only screen and (max-width: 1280px) {
   .band-page .band-page__members {
     -ms-grid-columns: (1fr)[2];
@@ -812,7 +832,6 @@
 .hero-discography {
   background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(7%, rgba(17, 17, 17, 0.5)), color-stop(15%, rgba(0, 0, 0, 0)), color-stop(85%, rgba(0, 0, 0, 0)), color-stop(92%, #111111), to(#111111)), url(../img/octafonic-banda5.jpg) repeat fixed 100%;
   background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0.5) 7%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, #111111 92%, #111111 100%), url(../img/octafonic-banda5.jpg) repeat fixed 100%;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 60vh;
@@ -826,10 +845,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero-discography .hero-discography__div {
-  padding: 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -858,7 +879,7 @@
     margin: 25px;
   }
   .hero-discography .hero-discography__div h1 {
-    font-size: 32px;
+    font-size: 42px;
   }
 }
 
@@ -877,22 +898,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 35px 0 50px 0;
 }
 
 .discography-page .discography-page__h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 15px 0;
   width: 75%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .discography-page .discography-page__h2 h2 {
   font-size: 42px;
   padding: 35px 0;
+  text-align: left;
 }
 
 .discography-page .discography-page__disc {
@@ -909,6 +926,19 @@
   height: auto;
 }
 
+.discography-page .discography-page__disc .discography-page__card img:hover {
+  opacity: 0.75;
+}
+
+.discography-page .discography-page__disc .discography-page__card h3 {
+  text-align: left;
+}
+
+.discography-page .discography-page__disc .discography-page__card p {
+  text-align: left;
+  color: #F47B22;
+}
+
 .discography-page .discography-page__singles {
   display: -ms-grid;
   display: grid;
@@ -922,6 +952,19 @@
 
 .discography-page .discography-page__singles .discography-page__card img {
   width: 100%;
+}
+
+.discography-page .discography-page__singles .discography-page__card img:hover {
+  opacity: 0.75;
+}
+
+.discography-page .discography-page__singles .discography-page__card h3 {
+  text-align: left;
+}
+
+.discography-page .discography-page__singles .discography-page__card p {
+  text-align: left;
+  color: #F47B22;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -942,28 +985,9 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .discography-page .discography-page__h2 {
-    width: 90%;
-  }
-  .discography-page .discography-page__disc {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    gap: 15px;
-    width: 90%;
-  }
-  .discography-page .discography-page__singles {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    gap: 15px;
-    width: 90%;
-  }
-}
-
 .hero-contact {
   background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(7%, rgba(17, 17, 17, 0.5)), color-stop(15%, rgba(0, 0, 0, 0)), color-stop(85%, rgba(0, 0, 0, 0)), color-stop(92%, #111111), to(#111111)), url(../img/octafonic-banda5.jpg) repeat fixed 100%;
   background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0.5) 7%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, #111111 92%, #111111 100%), url(../img/octafonic-banda5.jpg) repeat fixed 100%;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 60vh;
@@ -977,29 +1001,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.hero-contact .hero-contact__div {
-  padding: 100px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.hero-contact .hero-contact__div .hero-contact__image {
-  display: block;
-  width: 35vw;
-  margin: 25px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1027,22 +1031,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 35px 0 50px 0;
 }
 
 .form-section .contact-page__h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 15px 0;
   width: 75%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  width: 50%;
 }
 
 .form-section .contact-page__h2 h2 {
   font-size: 42px;
   padding: 35px 0;
+  text-align: left;
 }
 
 .form-section div {
@@ -1050,7 +1051,7 @@
 }
 
 .form-section .form-section__contact {
-  width: 75%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,16 +1111,20 @@
           justify-content: center;
 }
 
-.form-section .form-section__button input {
+.form-section .form-section__button input[type="submit"] {
   width: 100%;
   background-color: #F47B22;
   color: white;
-  padding: 10px 0;
-  font-size: 18px;
+  padding: 20px 0;
+  font-size: 24px;
   font-weight: 600;
+  border-radius: 50px;
 }
 
 @media only screen and (max-width: 1200px) {
+  .form-section .contact-page__h2 {
+    width: 90%;
+  }
   .form-section .form-section__contact {
     width: 90%;
   }
@@ -1208,32 +1213,4 @@ body h5 {
 body h6 {
   color: white;
   font-family: 'Roboto', sans-serif;
-}
-
-.button, .button-shows {
-  font-weight: 900;
-  font-size: 26px;
-  background-color: #f67723;
-  padding: 30px 45px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.button:hover, .button-shows:hover {
-  background-color: #f67723c9;
-  color: white;
-}
-
-.button-shows:hover {
-  margin-right: 10px;
-}
-
-@media only screen and (max-width: 700px) {
-  .button-shows {
-    width: 100%;
-  }
-  .button-shows:hover {
-    margin-right: 0px;
-  }
 }

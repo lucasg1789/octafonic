@@ -44,15 +44,8 @@
     align-items: center;
     flex-direction: column;
     padding: 0 0 35px 0;
-    .merch-page__h2 {
-        display: flex;
-        padding: 15px 0;
-        width: 75%;
-        justify-content: flex-start;
-        h2 {
-            font-size: 42px;
-            padding: 35px 0;
-        }
+    .merch-page__tittle {
+        @include tittle;
     }
     .merch-page__grid {
     display: grid;
@@ -60,7 +53,7 @@
     justify-content: center;
     gap: 25px;
     margin: 0 auto;
-    width: 75%;
+    width: $global-width;
     .merch-page__product {
         img {
             width: 100%;
@@ -68,14 +61,12 @@
                 opacity: 0.75;
             }
         }
+        h3 {
+            text-align: left;
+        }
         p {
             text-align: left;
-            color: #f67723;
-            font-weight: 600;
-        }
-        .merch-page__h2 {
-            font-size: 18px;
-            text-align: left;
+            color: $primary-global-color;
         }
     }
     }
@@ -83,6 +74,12 @@
 
 @media only screen and (max-width: 1280px){
     .merch-page {
+        .merch-page__tittle {
+            width: 90%;
+            h2 {
+                font-size: 42px;
+            }
+        }
         .merch-page__grid {
             grid-template-columns: repeat(2, 1fr);
             width: 90%;

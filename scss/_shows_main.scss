@@ -9,7 +9,6 @@
     flex-direction: column;
     justify-content: center;
     .hero-shows__div {
-        padding: 100px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -43,22 +42,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    .shows-page__h2 {
-        display: flex;
-        padding: 15px 0;
-        width: 75%;
-        justify-content: flex-start;
-        h2 {
-            font-size: 42px;
-            padding: 35px 0 0 0;
-        }
+    padding: 35px 0 50px 0;
+    .shows-page__tittle {
+        @include tittle;
     }
     .shows-page__grid {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-content: end;
         align-content: center;
-        width: 75%;
+        width: $global-width;
         border-bottom: solid 1px white;
         padding: 35px 0;
         .shows-page__datecolumn {
@@ -96,11 +89,17 @@
             align-items: flex-end;
         }
     }
+    .shows-page__grid--firts {
+        padding-top: 0;
+    }
 }
 
 
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 768px){
     .shows-page {
+        .shows-page__tittle {
+            @include tittle-responsive;
+        }
         .shows-page__grid {
             display: grid;
             grid-template-columns: 1fr;

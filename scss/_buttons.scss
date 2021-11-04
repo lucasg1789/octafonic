@@ -1,0 +1,22 @@
+.button {
+    @include btn;
+    &:hover {
+        @include hover;
+    }
+}
+
+.button-shows {
+    @extend .button;
+    &:hover {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .button-shows {
+        width: 100%;
+        &:hover {
+            margin-right: 0px;
+        }
+    }
+}
