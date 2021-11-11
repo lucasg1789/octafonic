@@ -1,7 +1,6 @@
 .social-footer {
     background-color: $secondary-global-color;
-    padding: 40px 0;
-    height: 20vh;
+    padding: 75px 0;
     .social-footer__div {
         display: flex;
         flex-direction: row;
@@ -10,7 +9,7 @@
         .social-footer__images {
             display: inline-block;
             width: 64px;
-            margin: 15px;
+            margin: 0 15px;
             transition: all 0.3s ease;
         }
         .social-footer__images:hover {

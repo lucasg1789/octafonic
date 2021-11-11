@@ -1,28 +1,22 @@
 .hero-contact {
     @include hero-section;
+    .hero-contact__div {
+        @include hero-div;
+    }
 }
 
 @media only screen and (max-width: 1200px){
     .hero-contact {
+        @include hero-section--responsive;
         .hero-contact__div {
-            .hero-contact__image {
-                display: block;
-                width: 65vw;
-                margin: 25px;
-            }
-            h1 {
-                font-size: 32px;
-            }
+            @include hero-div--responsive;
         }
     }
 }
 
 .form-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 35px 0 50px 0;
+    background: url(../img/background.jpg) repeat fixed 100%;
+    @include flex-section;
     .contact-page__h2 {
         @include tittle;
         width: 50%;
@@ -75,8 +69,10 @@
 
 @media only screen and (max-width: 1200px){
     .form-section {
+        padding: $section-padding--responsive;
         .contact-page__h2 {
-            width: 90%;
+            @include tittle-responsive;
+            width: $global-width-responsive;
         }
         .form-section__contact {
             width: $global-width-responsive;

@@ -2,10 +2,7 @@ $primary-global-color: #F47B22;
 $secondary-global-color: #111111;
 $global-width: 75%;
 $global-width-responsive: 90%;
+$global-gap: 25px;
 $tittle-size: 42px;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+$section-padding: 35px 0 50px 0;
+$section-padding--responsive: 0 0 35px 0;

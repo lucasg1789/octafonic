@@ -11,21 +11,11 @@
 @import "_banda-main.scss";
 @import "_discografia-album.scss";
 @import "_contacto-main.scss";
-@import "_footer-shows.scss";
 
-
-@mixin section-padding {
-    padding: 35px 0;
-}
-
-@mixin primary-font {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-}
-
-@mixin secondary-font {
-    color: white;
-    font-family: 'Roboto', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -33,7 +23,7 @@ body {
     color: white;
     text-align: center;
     a {
-        @include secondary-font;
+        @include primary-font;
         text-decoration: none;
     }
     P {

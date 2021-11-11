@@ -26,7 +26,6 @@
         background-color: #11111179;
         backdrop-filter: blur(5px);
         .menu-header__ul {
-            text-decoration: none;
             width: 100%;
             margin: auto;
             padding: 5px;
@@ -37,8 +36,6 @@
                 text-align: center;
                 position: relative;
                 a {
-                    text-decoration: none;
-                    color: white;
                     display: block;
                     padding: 5px 10px;
                     font-size: 24px;
@@ -74,7 +71,7 @@
                 height: 100vh;
                 .menu-header__li {
                     a {
-                        font-size: 3em;
+                        font-size: 2.5em;
                     }
                 }
             }
